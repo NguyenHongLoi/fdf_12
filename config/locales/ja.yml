@@ -5,6 +5,9 @@ ja:
       short_time: "%H:%M"
       date_format: "MM/DD/YYYY"
   split: " -"
+  warning_firefox: "The site does not display well on Firefox Browser.
+    Please use Chrome to get the best experience.
+    Sorry for the inconvenience!"
   manual_help_forder: "Help"
   step_one_help_forder: "Step 1: Please select a domain public to join"
   step_two_help_forder: "Step 2: Click the button when you have domain join in the public domain"

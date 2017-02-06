@@ -41,6 +41,9 @@ vi:
       short_time: "%H:%M"
       date_format: "MM/DD/YYYY"
   split: " -"
+  warning_firefox: "Trang web không hiển thị tốt trên Trình duyệt Firefox.
+    Vui lòng sử dụng Chrome để có trải nghiệm tốt nhất.
+    Xin lỗi vì sự bất tiện này!"
   manual_help_forder: "Hướng dẫn sử dụng"
   step_one_help_forder: "Bước 1: Vui lòng chọn một miền công khai để tham gia"
   step_two_help_forder: "Bước 2: Bấm vào nút tham gia miền khi bạn đã ở trong miền công khai"
