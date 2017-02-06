@@ -24,7 +24,7 @@
   </div>
   <div class="unit5">
     <div class="m-panel pad-50">
-      <h3 class="capcase lead mar-bottom-20">
+      <h3 class="lead">
         <strong>
           <%= @product.name %>
           <%= link_to cart_path(@product.id), remote: true,
@@ -67,19 +67,19 @@
       </div>
       <div class="a-divider--hidden"></div>
     </div>
-    <div class="m-panel m-panel-item">
+    <div class="m-panel m-panel-item col-md-12 col-sm-12 col-xs-12">
       <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-4 col-sm-6 col-xs-5">
           <span class="shop-thumbnail">
             <%= image_tag @product.shop_avatar.url %>
           </span>
         </div>
-        <div class="col-md-10">
+        <div class="col-md-8 col-sm-6 col-xs-7">
           <h3>
             <%= link_to @product.shop_name, @product.shop,
-              class: "capcase lead mar-bottom-20" %>
+              class: "lead padd-left-products" %>
           </h3>
-          <p class="smallcaps mar-right-10">
+          <p class="padd-left-products">
             <%= t "common.product_number",
               number: @product.shop.products.size %>
           </p>
