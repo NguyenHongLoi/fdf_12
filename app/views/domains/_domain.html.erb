@@ -7,31 +7,21 @@
       <i class="glyphicon glyphicon-lock"></i>
     <% end %>
     <%= link_to domain.name, domain_path(domain) %>
-    <a href="#" id="basic-nav-dropdown" data-toggle="dropdown"
-      class="dropdown-toggle" role="button">
-      <div>
-        <span class="user-title">
-          <b class="caret"></b>
-        </span>
-      </div>
-    </a>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="basic-nav-dropdown">
-      <% Domain.statuses.each do |key, value| %>
-        <li role="presentation">
-          <%= link_to domain_path(domain, status: key), method: :put do %>
-            <% if value == Domain.statuses[:professed] %>
-              <i class="glyphicon glyphicon-globe"></i>
-              <span><%= t "professed" %></span>
+    <ul class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <% Domain.statuses.each do |key, value| %>
+          <li role="presentation">
+            <%= link_to domain_path(domain, status: key), method: :put do %>
+              <%= raw display_domain_status value %>
             <% end %>
-            <% if value == Domain.statuses[:secret] %>
-              <i class="glyphicon glyphicon-lock"></i>
-              <span><%= t "secret" %></span>
-            <% end %>
-          <% end %>
-        </li>
-        <li role="separator" class="divider"></li>
-        <li role="separator" class="divider"></li>
-      <% end %>
+          </li>
+          <li role="separator" class="divider"></li>
+          <li role="separator" class="divider"></li>
+        <% end %>
+      </ul>
+    </ul>
     </ul>
   </td>
   <td>

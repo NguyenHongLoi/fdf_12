@@ -94,4 +94,17 @@ module ApplicationHelper
   def domain_icon domain
     domain.professed? ? Settings.domain.professed : Settings.domain.secret
   end
+
+  def display_domain_status value
+    case value
+    when Domain.statuses[:professed]
+      html = ""
+      html += "<i class=\"glyphicon glyphicon-globe\"></i>"
+      html += "<span>#{t "professed"}</span>"
+    when Domain.statuses[:secret]
+      html = ""
+      html += "<i class=\"glyphicon glyphicon-lock\"></i>"
+      html += "<span>#{t "secret"}</span>"
+    end
+  end
 end

@@ -44,6 +44,10 @@ vi:
   warning_firefox: "Trang web không hiển thị tốt trên Trình duyệt Firefox.
     Vui lòng sử dụng Chrome để có trải nghiệm tốt nhất.
     Xin lỗi vì sự bất tiện này!"
+  manual_help_forder: "Hướng dẫn sử dụng"
+  step_one_help_forder: "Bước 1: Vui lòng chọn một miền công khai để tham gia"
+  step_two_help_forder: "Bước 2: Bấm vào nút tham gia miền khi bạn đã ở trong miền công khai"
+  step_three_help_forder: "Bước 3: Truy cập vào các shop trong miền để đặt món bạn thích"
   request_have_been_delete: "Yêu cầu đã bị xóa"
   add_domain_manager: "vừa cho bạn trở thành người quản lí của miền:"
   remote_domain_manager: "vừa xóa bạn ra khỏi danh sách quản lí của miền:"
@@ -464,7 +468,7 @@ vi:
       index:
         empty_list: "Chưa có sản phẩm nào, vui lòng tạo mới"
         new_button: "Tạo mới sản phẩm"
-        delete: “Xóa"
+        delete: "Xóa"
       show:
         name: "Tên"
         quantity: "Số lượng"

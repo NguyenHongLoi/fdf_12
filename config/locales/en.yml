@@ -8,6 +8,10 @@ en:
   warning_firefox: "The site does not display well on Firefox Browser.
     Please use Chrome to get the best experience.
     Sorry for the inconvenience!"
+  manual_help_forder: "Help"
+  step_one_help_forder: "Step 1: Please select a domain public to join"
+  step_two_help_forder: "Step 2: Click the button when you have domain join in the public domain"
+  step_three_help_forder: "Step 3: Access to the shop in the domain to order your favorite food or drink"
   request_have_been_delete: "The request have been deleted"
   add_domain_manager: "have made you become the manager of domain:"
   remote_domain_manager: "have remote you from the list manager of domain:"

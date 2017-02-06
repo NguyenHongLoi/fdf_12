@@ -538,7 +538,9 @@ text-small {
     width: 716px;
   }
 
-  tbody, thead tr { display: block; }
+  tbody, thead tr {
+    display: block;
+  }
 
   tbody {
     height: 100px;
@@ -553,4 +555,9 @@ text-small {
   thead th:last-child {
     width: 156px;
   }
+}
+
+.food_banner_size {
+  width: 16px;
+  height: 16px;
 }

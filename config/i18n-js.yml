@@ -25,6 +25,3 @@
 #   - file: "app/assets/javascripts/i18n/translations.js"
 #     only: "*"
 #
-
-file: 'app/assets/javascripts/i18n/translations.js'
-only: "*"
