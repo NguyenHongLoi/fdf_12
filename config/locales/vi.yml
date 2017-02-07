@@ -41,13 +41,23 @@ vi:
       short_time: "%H:%M"
       date_format: "MM/DD/YYYY"
   split: " -"
+  introduce_domain_help: "Giới thiệu"
+  step_one_domain_help: "Bước 1"
+  step_two_domain_help: "Bước 2"
+  step_three_domain_help: "Bước 3"
+  finished_domain_help: "Kết thúc!"
+  next_btn_domain_help: "Kế tiếp"
+  congrat_domain_help: "Bạn đã sẵng sàng sử dụng Forder!"
+  back_btn_domain_help: "Quay về"
   warning_firefox: "Trang web không hiển thị tốt trên Trình duyệt Firefox.
     Vui lòng sử dụng Chrome để có trải nghiệm tốt nhất.
     Xin lỗi vì sự bất tiện này!"
   manual_help_forder: "Hướng dẫn sử dụng"
-  step_one_help_forder: "Bước 1: Vui lòng chọn một miền công khai để tham gia"
-  step_two_help_forder: "Bước 2: Bấm vào nút tham gia miền khi bạn đã ở trong miền công khai"
-  step_three_help_forder: "Bước 3: Truy cập vào các shop trong miền để đặt món bạn thích"
+  step_one_help_forder: "Vui lòng chọn một miền công khai để tham gia"
+  step_two_help_forder: "Khi bạn đã ở trong miền công khai hãy bấm vào nút
+    tham gia miền để tham gia miền đó"
+  step_three_help_forder: "Khi đã ở trong miền bạn có thể truy cập vào các shop
+    trong miền để đặt món bạn thích"
   request_have_been_delete: "Yêu cầu đã bị xóa"
   add_domain_manager: "vừa cho bạn trở thành người quản lí của miền:"
   remote_domain_manager: "vừa xóa bạn ra khỏi danh sách quản lí của miền:"
