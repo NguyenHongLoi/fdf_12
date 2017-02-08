@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  namespace :api do
+    resources :products
+  end
+
   namespace :domain do
     get "user_domains/new"
   end
