@@ -77,3 +77,9 @@ domain:
 feedback: "https://docs.google.com/forms/d/e/1FAIpQLSeWye6zJ8U7epz5W3G5MDZTT8YE5rWELbHDpyRtD4drC0QrGw/viewform"
 max_user_name: 8
 min_price: 0
+max_user_name: 8
+limit_products_json: 10
+next_products_json: "v1/products?offset="
+product_end_true_json: "true"
+product_end_false_json: "false"
+product_end_reason_json: "Đã đến sản phẩm cuối cùng!"
