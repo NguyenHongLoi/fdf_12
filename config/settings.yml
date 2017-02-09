@@ -80,3 +80,9 @@ min_price: 0
 max_description: 22
 max_shop_name: 20
 max_shop_name_dash: 30
+max_user_name: 8
+limit_products_json: 10
+next_products_json: "v1/products?offset="
+product_end_true_json: "true"
+product_end_false_json: "false"
+product_end_reason_json: "Đã đến sản phẩm cuối cùng!"
