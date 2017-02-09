@@ -40,6 +40,7 @@ gem "roo-xls"
 gem "delayed_job_active_record"
 gem "rails-i18n", "~> 5.0.0"
 gem "i18n-js", ">= 3.0.0.rc11"
+gem "active_model_serializers", "~> 0.10.0"
 source "https://rails-assets.org" do
   gem "rails-assets-datetimepicker"
   gem "rails-assets-growl"
