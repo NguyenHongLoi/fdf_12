@@ -42,6 +42,7 @@ gem "rails-i18n", "~> 5.0.0"
 gem "i18n-js", ">= 3.0.0.rc11"
 gem "versionist"
 gem "active_model_serializers", "~> 0.10.0"
+gem "simple_token_authentication", "~> 1.0"
 source "https://rails-assets.org" do
   gem "rails-assets-datetimepicker"
   gem "rails-assets-growl"

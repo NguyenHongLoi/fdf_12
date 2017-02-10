@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
-  api_version module: "V1", path: {value: "v1"}, default: true do
-    resources :products
-  end
+
   namespace :domain do
     get "user_domains/new"
   end
@@ -34,6 +32,11 @@ Rails.application.routes.draw do
     resources :set_user, only: :create
     resources :shops, except: [:new, :create, :show]
     resources :request_shop_domains
+  end
+
+  api_version module: "V1", path: {value: "v1"}, default: true do
+    resources :products
+    resources :users
   end
 
   namespace :dashboard do
