@@ -1,4 +1,5 @@
 class UserDomain < ApplicationRecord
+  include ChatworkHelper
   belongs_to :user
   belongs_to :domain
 
@@ -20,20 +21,23 @@ class UserDomain < ApplicationRecord
   end
 
   def create_event_add_user_domain user_id
-    Event.create message: :join_domain,
+    event = Event.create message: :join_domain,
       user_id: user_id, eventable_id: self.domain.id, eventable_type: UserDomain.name,
       eventitem_id: self.user.id
+    send_message_chatwork event.load_message, user_id
   end
 
   def create_event_add_manager_domain user_id
     if self.manager?
-      Event.create message: self.role,
+      event = Event.create message: self.role,
         user_id: user_id, eventable_id: self.domain.id, eventable_type: Domain.name,
         eventitem_id: self.id
+      send_message_chatwork event.load_message, user_id
     elsif self.member?
-      Event.create message: self.role,
+      event = Event.create message: self.role,
         user_id: user_id, eventable_id: self.domain.id, eventable_type: Domain.name,
         eventitem_id: self.user.id
+      send_message_chatwork event.load_message, user_id
     end
   end
 end

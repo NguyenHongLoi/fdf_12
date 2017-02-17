@@ -1,4 +1,5 @@
 class Shop < ApplicationRecord
+  include ChatworkHelper
   acts_as_paranoid
 
   ratyrate_rateable Settings.rate
@@ -57,7 +58,7 @@ class Shop < ApplicationRecord
   scope :shop_in_domain, -> domain_id do
     joins(:shop_domains)
       .where "shop_domains.domain_id = ? and shop_domains.status = ?", domain_id,
-      ShopDomain.statuses[:approved]
+        ShopDomain.statuses[:approved]
   end
 
   def is_owner? user
@@ -112,8 +113,9 @@ class Shop < ApplicationRecord
 
   def send_notification
     if self.status_changed? && !self.pending?
-      Event.create message: self.status, user_id: owner_id,
+      event = Event.create message: self.status, user_id: owner_id,
         eventable_id: id, eventable_type: Shop.name
+      send_message_chatwork event.load_message, owner_id
     end
   end
 end

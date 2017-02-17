@@ -1,4 +1,5 @@
 class Order < ApplicationRecord
+  include ChatworkHelper
   attr_accessor :cart, :change_status
   acts_as_paranoid
   belongs_to :user
@@ -115,29 +116,34 @@ class Order < ApplicationRecord
 
   def create_notification
     if self.products.size != Settings.count_tag
-      Event.create message: Settings.notification_new,
+      event = Event.create message: Settings.notification_new,
         user_id: self.shop.owner_id, eventable_id: shop.id,
-          eventable_type: Order.name, eventitem_id: self.id
+        eventable_type: Order.name, eventitem_id: self.id
+      send_message_chatwork event.load_message, self.shop.owner_id
     end
   end
 
   def create_event_done products_done, products_rejected
-    Event.create message: :done,
+    event = Event.create message: :done,
       user_id: self.user.id, eventable_id: shop.id, eventable_type: OrderProduct.name,
-        eventitem_id: self.id
-    Event.create message: :done,
+      eventitem_id: self.id
+    send_message_chatwork event.load_message, self.user.id
+    event = Event.create message: :done,
       user_id: self.shop.owner_id, eventable_id: shop.id, eventable_type: User.name,
-        eventitem_id: self.id
+      eventitem_id: self.id
+    send_message_chatwork event.load_message, self.shop.owner_id
   end
 
   def create_event_reject
-    Event.create message: :rejected,
+    event = Event.create message: :rejected,
       user_id: user_id, eventable_id: id, eventable_type: Order.name
+    send_message_chatwork event.load_message, user_id
   end
 
   def create_event_order
-    Event.create message: :sent_order,
+    event = Event.create message: :sent_order,
       user_id: user_id, eventable_id: id, eventable_type: Order.name
+    send_message_chatwork event.load_message, user_id
   end
   private
 

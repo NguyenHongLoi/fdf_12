@@ -37,7 +37,7 @@ en:
   user_order_products: "You have successfully submitted orders"
   done_products: "products ordered"
   rejected_products: "products rejected"
-  dada_not_found: "User deleted request"
+  dada_not_found: "User deleted request into domain"
   you: "You"
   by: " of "
   request_join_domain: " already joined the domain: "

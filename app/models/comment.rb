@@ -1,4 +1,5 @@
 class Comment < ApplicationRecord
+  include ChatworkHelper
   acts_as_paranoid
   belongs_to :user
   belongs_to :commentable, polymorphic: true
@@ -12,9 +13,10 @@ class Comment < ApplicationRecord
 
   private
   def create_event
-    Event.create message: "",
+    event = Event.create message: "",
       user_id: self.commentable.user.id, eventable_id: commentable.id,
-        eventable_type: Product.name,
-        eventitem_id: self.id
+      eventable_type: Product.name,
+      eventitem_id: self.id
+    send_message_chatwork event.load_message, self.commentable.user.id
   end
 end
