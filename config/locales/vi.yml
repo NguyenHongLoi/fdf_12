@@ -41,11 +41,33 @@ vi:
       short_time: "%H:%M"
       date_format: "MM/DD/YYYY"
   split: " -"
+<<<<<<< HEAD
   api:
     error_password_wrong: "Sai mật khẩu!"
     error_user_not_found: "Không tìm thấy người dùng!"
     error_products_not_found: "Không tìm thấy sản phẩm!"
     success: "OK"
+=======
+  framgia_label: "Framgia"
+  image_index: "Hình ảnh"
+  feature_index: "Tính năng"
+  contact_index: "Liên lạc"
+  help_manual_index: "Hướng dẫn sử dụng"
+  framgia_user_feedback_index: "Nhận xét của khách hàng: "
+  framgia_user_feedback_context: "Tôi đã sử dụng Forder từ những ngày đầu và rất tin tưởng
+    vào sản phẩm của công ty, tôi cảm thấy hài lòng vì mọi sản phẩm được đặt ở đây đều đảm bảo
+    về chất lượng sản phẩm cũng như uy tín, thời gian giao hàng rất đúng hẹn, tôi sẽ còn tiếp
+    tục sử dụng sản phẩm trong tương lai và sẽ giới thiệu Forder cho bạn bè sử dụng."
+  framgia_user_name_feedback: " - Nguyễn Lợi"
+  framgia_user_job_feedback: "Nhân viên văn phòng"
+  framgia_sum_products: "Số sản phẩm"
+  framgia_sum_user: "Số người dùng"
+  framgia_sum_intro: "Trang web hiện có: "
+  framgia_company_copyright: "© 2016 Framgia Viet Nam"
+  forder_index_label: "By Framgia"
+  forder_index_intro: "Đây là một trang web đặt món ăn chuyên nghiệp
+    để biết thêm chi tiết vui lòng đọc hướng dẫn sử dụng"
+>>>>>>> 3983fb9... redesign_index_v1
   user_cancel_order_products: "Bạn vừa hủy một đơn hàng"
   introduce_domain_help: "Giới thiệu"
   step_one_domain_help: "Bước 1"
@@ -199,7 +221,7 @@ vi:
   accept_all: "Xác nhận tất cả"
   create_order: "Gửi đi"
   common:
-    base_title: "Framgia Food And Drink Order"
+    base_title: "Food And Drink Order"
     admin_title: "Quản trị"
     home: "Trang chủ"
     number: "STT"
@@ -700,7 +722,8 @@ vi:
   index:
     intro_search:
       title: "Tìm kiếm dễ dàng"
-      context: "Với F-order, bạn có thể dễ dàng tìm kiếm những món ăn, đồ uống ngon, chất lượng theo từng miền"
+      context: "Với F-order, bạn có thể dễ dàng tìm kiếm những món ăn, đồ uống ngon, theo từng miền
+        một cách nhanh chóng và tiện lợi, ngoài ra bạn cũng thể tìm kiếm theo đơn hàng hoặc theo sở thích"
     intro_order:
       title: "Đặt hàng thuận tiện, nhanh chóng"
       context: "Bạn có thể đặt cho mình các sản phẩm một cách dễ dàng, luôn nhận được thông báo mỗi khi đơn hàng có sự thay đổi"

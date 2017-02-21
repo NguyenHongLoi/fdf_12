@@ -26,10 +26,11 @@
 //= require datetimepicker
 //= require growl
 //= require jquery.transit.min
-//= require_tree .
 //= require social-share-button
 //= require i18n.js
 //= require i18n/translations
+//= require_tree .
+
 
 $(document).ready(function () {
   $('.alert').fadeOut(5000);
