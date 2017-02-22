@@ -83,4 +83,9 @@ Rails.application.routes.draw do
   resources :set_carts
   resources :pdf_readers, only: :index
   resources :user_searchs
+
+  api_version module: "V1", path: {value: "v1"}, default: true do
+    resources :products
+    resources :users
+  end
 end

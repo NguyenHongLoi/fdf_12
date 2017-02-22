@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  acts_as_token_authenticatable
   ratyrate_rater
 
   extend FriendlyId
