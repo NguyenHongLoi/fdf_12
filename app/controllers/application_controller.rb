@@ -149,9 +149,9 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  JsonResponse::STATUS_CODE.keys.each do |status|
+  JsonResponse::STATUS_CODE.each do |status, code|
     define_method "response_#{status}" do |message = "", content = {}|
-      render json: JsonResponse.send(status, message, content)
+      render json: JsonResponse.send(status, message, content), status: code
     end
   end
 
