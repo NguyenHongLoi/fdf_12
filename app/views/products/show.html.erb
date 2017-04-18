@@ -1,3 +1,12 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div class="line">
   <div class="unit7">
     <div class="m-panel pad-50">
@@ -10,7 +19,8 @@
       <%= social_share_button_tag @product.name %>
     </div>
     <div class="fb-like" data-href="<%= request.original_url %>"
-    data-layout="standard" data-action="like"></div>
+      data-layout="standard" data-action="like" data-size="small"
+      data-show-faces="true" data-share="true"></div>
     <ul class="tags">
       <% @product.tags.each do |tag| %>
         <li><%= link_to tag.name, tag_path(tag), class: "tag" %></li>
