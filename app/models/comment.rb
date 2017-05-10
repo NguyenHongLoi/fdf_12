@@ -1,4 +1,6 @@
 class Comment < ApplicationRecord
+  strip_attributes only: :content
+
   acts_as_paranoid
   belongs_to :user
   belongs_to :commentable, polymorphic: true

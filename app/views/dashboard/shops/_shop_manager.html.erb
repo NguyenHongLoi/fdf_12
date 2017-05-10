@@ -15,22 +15,23 @@
               <%= link_to shop_mn.shop.name, domain_dashboard_shop_path(@domain, shop_mn.shop) %>
             </h3><%= render "shared/shop_status_label", shop: shop_mn.shop %>
           </div>
+          <div class="check_button_status_shop">
           <% if shop_mn.shop.status_on_off == Settings.shop_status_off %>
             <label class="switch">
-              <%= check_box_tag "shops[]", shop_mn.shop.id, false, class: "checkbox",
-                id: "checkbox_#{shop_mn.shop.id}", data:{remote: true} %>
+              <%= check_box_tag "checkbox_#{shop_mn.shop.id}", shop_mn.shop.id, false,
+                class: "checkbox", data:{remote: true} %>
               <div class="slider round"></div>
             </label>
           <% else %>
             <label class="switch">
-              <%= check_box_tag "shops[]", shop_mn.shop.id, true,
-                class: "checkbox", id: "checkbox_#{shop_mn.shop.id}",
-                data:{remote: true} %>
+              <%= check_box_tag "checkbox_#{shop_mn.shop.id}", shop_mn.shop.id, true,
+                class: "checkbox", data:{remote: true} %>
               <div class="slider round"></div>
             </label>
           <% end %>
           <div class="description-margin-bot checkbox_<%= shop_mn.shop.id %>">
             <%= render "dashboard/shops/shop_label_status", shop: shop_mn.shop %>
+          </div>
           </div>
           <div class="description quote", title="<%= shop_mn.shop.description %>"><p>
             <%= truncate(shop_mn.shop.description, length: Settings.max_description) %></p>

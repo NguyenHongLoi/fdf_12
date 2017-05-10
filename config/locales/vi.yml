@@ -41,6 +41,7 @@ vi:
       short_time: "%H:%M"
       date_format: "MM/DD/YYYY"
   split: " -"
+  wrong_from_day_to_day_find: "Ngày tìm kiếm không đúng!"
   cart_quick:
     order_now: "Đặt ngay"
     finish: "Hoàn tất"

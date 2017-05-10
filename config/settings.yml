@@ -1,6 +1,7 @@
 common:
   per_page: 6
   products_per_page: 12
+  shops_per_page: 16
 orders:
   status: {open: "open", deliver: "deliver", close: "close"}
 pictures:

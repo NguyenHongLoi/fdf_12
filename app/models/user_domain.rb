@@ -1,4 +1,6 @@
 class UserDomain < ApplicationRecord
+  strip_attributes only: [:description, :name]
+
   belongs_to :user
   belongs_to :domain
 

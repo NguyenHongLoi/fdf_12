@@ -1,4 +1,6 @@
 class OrderProduct < ApplicationRecord
+  strip_attributes only: :notes
+
   acts_as_paranoid
 
   belongs_to :user

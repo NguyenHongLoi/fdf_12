@@ -1,4 +1,6 @@
 class Category < ApplicationRecord
+  strip_attributes only: :name
+
   acts_as_paranoid
 
   extend FriendlyId

@@ -8,7 +8,7 @@ class ShopsController < ApplicationController
     else
       Shop.all
     end.active.page(params[:page])
-      .per(Settings.common.per_page).decorate
+      .per(Settings.common.shops_per_page).decorate
   end
 
   def show

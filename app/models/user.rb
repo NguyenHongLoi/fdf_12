@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  strip_attributes only: [:description, :name, :chatwork_id]
+
   acts_as_token_authenticatable
   ratyrate_rater
 

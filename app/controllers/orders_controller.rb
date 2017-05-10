@@ -8,10 +8,16 @@ class OrdersController < ApplicationController
 
   def index
     tmp_orders = current_user.orders.by_domain(session[:domain_id])
-    @orders = if params[:start_date].present? && params[:end_date].present?
-      tmp_orders.between_date params[:start_date], params[:end_date]
+    if params[:start_date].present? && params[:end_date].present?
+      if params[:start_date] <= params[:end_date]
+        @orders = tmp_orders.between_date params[:start_date], params[:end_date]
+      else
+        flash[:danger] = t "wrong_from_day_to_day_find"
+        @orders = tmp_orders.on_today.by_date_newest.page(params[:page])
+          .per Settings.common.per_page
+      end
     else
-      tmp_orders.on_today.by_date_newest.page(params[:page])
+      @orders = tmp_orders.on_today.by_date_newest.page(params[:page])
         .per Settings.common.per_page
     end
     params[:status] ||= Settings.filter_status_order.all

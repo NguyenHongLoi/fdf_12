@@ -1,4 +1,6 @@
 class Domain < ApplicationRecord
+  strip_attributes only: :name
+
   has_many :user_domains
   has_many :shop_domains
   has_many :product_domains

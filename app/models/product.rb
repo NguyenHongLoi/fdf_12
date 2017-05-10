@@ -1,4 +1,6 @@
 class Product < ApplicationRecord
+  strip_attributes only: [:description, :name]
+
   acts_as_paranoid
   acts_as_taggable
 

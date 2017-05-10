@@ -56,6 +56,7 @@ gem "friendly_id", "~> 5.1.0"
 gem "ratyrate"
 gem "redis", "~> 3.0"
 gem "fcm"
+gem "strip_attributes"
 
 group :development, :test do
   gem "byebug", platform: :mri

@@ -1,4 +1,6 @@
 class Shop < ApplicationRecord
+  strip_attributes only: [:description, :name]
+
   acts_as_paranoid
 
   ratyrate_rateable Settings.rate
